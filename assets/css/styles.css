@@ -407,7 +407,8 @@ input:focus,textarea:focus{
     display:none;
     background:var(--bg);
     border-bottom:1px solid var(--border);
-    padding:1rem
+    padding:1rem;
+    margin-left: 2rem;
   }
   .nav.open{
     display:flex;
