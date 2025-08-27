@@ -309,7 +309,7 @@ body{
 }
 .chip{
   border:1px solid var(--border);
-  background:var(--card);
+  background:var(--accent-2);
   padding:.4rem .7rem;
   border-radius:999px;
   cursor:pointer;
