@@ -13,6 +13,22 @@
     });
   }
 
+
+ // Add hover effects with JavaScript for enhanced interactivity
+        document.querySelectorAll('.social-handle').forEach(handle => {
+            handle.addEventListener('mouseenter', () => {
+                handle.style.cursor = 'pointer';
+            });
+            
+            handle.addEventListener('click', () => {
+                const link = handle.querySelector('.social-link');
+                if (link && link.href) {
+                    window.open(link.href, '_blank');
+                }
+            });
+        });
+
+
   // Mobile nav
   const btn = document.querySelector('.nav-toggle');
   const nav = document.querySelector('[data-nav]');

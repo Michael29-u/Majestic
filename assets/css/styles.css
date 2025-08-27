@@ -410,3 +410,109 @@ input:focus,textarea:focus{
     gap:.5rem
   }
 }
+
+.social-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .social-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2d3748;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .social-handle {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+        
+        .social-handle:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-right: 15px;
+        }
+        
+        .linkedin {
+            background-color: #0077b5;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+        
+        .tiktok {
+            background-color: #000000;
+        }
+        
+        .telegram {
+            background-color: #0088cc;
+        }
+        
+        .social-info {
+            flex-grow: 1;
+        }
+        
+        .social-platform {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 3px;
+        }
+        
+        .social-username {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 1.1rem;
+        }
+        
+        .social-handle:hover .social-username {
+            color: #4a5568;
+        }
+        
+        .social-link {
+            color: #a0aec0;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-handle:hover .social-link {
+            color: #4a5568;
+        }
+        
+        @media (max-width: 500px) {
+            .social-container {
+                padding: 20px;
+            }
+            
+            .social-handle {
+                padding: 12px 15px;
+            }
+            
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
