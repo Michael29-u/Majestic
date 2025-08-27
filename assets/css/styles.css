@@ -34,9 +34,10 @@ body{
   max-width:1100px;
   margin:0 auto;
   padding:0 1rem;
-  text-align: center;
-  
 }
+div .container p {
+    text-align: center;
+  }
 
 .site-header{
   position:sticky;
