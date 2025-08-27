@@ -35,7 +35,7 @@ body{
   margin:0 auto;
   padding:0 1rem;
 }
-div p {
+.footer-p {
     text-align: center;
   }
 
