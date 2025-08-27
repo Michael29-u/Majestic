@@ -415,7 +415,7 @@ input:focus,textarea:focus{
     text-align: center;
     max-width: 800px;
     width: 100%;
-    align-items: center;
+    align-content: center;
 }
 
 .socials-title {
