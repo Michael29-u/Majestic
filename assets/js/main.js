@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 (function(){
   // Theme toggle with persistence
   const root = document.documentElement;
