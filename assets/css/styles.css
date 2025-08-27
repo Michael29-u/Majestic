@@ -55,7 +55,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0.75rem 0
+  padding:0.70rem 0
 }
 .logo{
   display:flex;
@@ -63,7 +63,8 @@ body{
   gap:.5rem;
   text-decoration:none;
   color:var(--text);
-  font-weight:700
+  font-weight:700;
+  margin-left: 10px;
 }
 .logo-mark{
   display:inline-grid;
@@ -408,7 +409,6 @@ input:focus,textarea:focus{
     background:var(--bg);
     border-bottom:1px solid var(--border);
     padding:1rem;
-    margin-left: 2rem;
   }
   .nav.open{
     display:flex;
