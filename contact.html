@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MJ — Portfolio</title>
+<link rel="icon" type="image/png" href="assets/img/mic.jpeg">
+<link rel="stylesheet" href="assets/css/styles.css" />
+<script defer src="assets/js/main.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="index.html"><span class="logo-mark">MJ</span><span class="logo-text">Portfolio</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" data-nav>
+      <a href="index.html" data-navlink>Home</a>
+      <a href="about.html" data-navlink>About</a>
+      <a href="projects.html" data-navlink>Projects</a>
+      <a href="contact.html" data-navlink>Contact</a>
+      <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>👀</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-header">
+    <h1>Contact</h1>
+    <p>Have a project in mind? Let's talk.</p>
+  </section>
+
+  <section class="contact-section">
+    <form id="contactForm" novalidate>
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required minlength="2" />
+        <small class="error" data-error-for="name"></small>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        <small class="error" data-error-for="email"></small>
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required minlength="10"></textarea>
+        <small class="error" data-error-for="message"></small>
+      </div>
+      <div class="form-actions">
+        <button class="btn primary" type="submit">Send Message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <aside class="contact-aside">
+      <h2>Other ways</h2>
+      <ul>
+        <li>Accra, Ghana</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><a href="tel:+233200000000">+233 20 000 0000</a></li>
+      </ul>
+    </aside>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> MJ Portfolio · Built with HTML, CSS & JS</p>
+  </div>
+</footer>
+
+</body>
+</html>

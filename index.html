@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MJ — Portfolio</title>
+<link rel="icon" type="image/png" href="assets/img/mic.jpeg">
+<link rel="stylesheet" href="assets/css/styles.css" />
+<script defer src="assets/js/main.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="index.html"><span class="logo-mark">MJ</span><span class="logo-text">Portfolio</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" data-nav>
+      <a href="index.html" data-navlink>Home</a>
+      <a href="about.html" data-navlink>About</a>
+      <a href="projects.html" data-navlink>Projects</a>
+      <a href="contact.html" data-navlink>Contact</a>
+      <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>👀</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div class="hero-text">
+      <h1 class="title">Hi, I'm <span class="accent">Majestic</span> — <span class="typewriter" data-rotate='["Web Developer.","Designer.","Problem Solver.", "Mobile App Developer"]'>Web Developer.</span></h1>
+      <p class="subtitle">I craft clean, responsive websites and web apps. Have a look around!</p>
+      <div class="cta">
+        <a class="btn primary" href="projects.html">View Projects</a>
+        <a class="btn" href="contact.html">Contact Me</a>
+      </div>
+      <ul class="quick-stats">
+        <li><strong>3+</strong><span>Years Experience</span></li>
+        <li><strong>30+</strong><span>Projects</span></li>
+        <li><strong>10</strong><span>Happy Clients</span></li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" role="img" aria-label="Abstract blob">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="var(--accent)"/>
+            <stop offset="100%" stop-color="var(--accent-2)"/>
+          </linearGradient>
+        </defs>
+        <path d="M214 44c22 13 41 31 50 55 9 25 7 55-7 77-14 23-40 37-66 49-26 11-52 20-77 13-24-7-46-29-57-54-11-25-11-53 0-80 11-26 33-50 60-63 26-12 58-12 97 2z" fill="url(#g1)"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="features container">
+    <h2 class="section-title">What I Do</h2>
+    <div class="grid cards">
+      <article class="card">
+        <h3>Responsive Web Apps</h3>
+        <p>Pixel-perfect, mobile-first experiences with semantic HTML and modern CSS.</p>
+      </article>
+      <article class="card">
+        <h3>UI/UX Prototyping</h3>
+        <p>From wireframes to delightful microinteractions that users love.</p>
+      </article>
+      <article class="card">
+        <h3>Performance & Accessibility</h3>
+        <p>Fast loads, smooth interactions, and inclusive design baked in.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="highlight container">
+    <div class="highlight-inner">
+      <div>
+        <h2>Featured Project</h2>
+        <p>A HR management dashboard with real-time insights and secure user roles.</p>
+        <a class="btn primary" href="projects.html#hr-dashboard">See details</a>
+      </div>
+      <div class="highlight-visual">
+        <div class="browser">
+          <div class="dots"></div>
+          <div class="bars"></div>
+          <div class="page-skeleton"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> MJ Portfolio · Built with HTML, CSS & JS</p>
+  </div>
+</footer>
+
+</body>
+</html>
