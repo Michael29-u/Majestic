@@ -48,7 +48,7 @@ body{
   z-index:50
 }
 :root[data-theme="light"] .site-header{
-  background:rgba(255,255,255,0.7)
+  background:rgba(255,255,255,0.7);
 }
 
 .nav-wrap{
@@ -312,10 +312,12 @@ body{
   background:var(--card);
   padding:.4rem .7rem;
   border-radius:999px;
-  cursor:pointer
+  cursor:pointer;
+  color: white;
 }
 .chip.active{
-  outline:2px solid var(--accent)
+  outline:2px solid var(--accent);
+  color: white;
 }
 
 .projects{
