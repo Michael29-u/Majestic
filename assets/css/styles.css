@@ -453,6 +453,7 @@ input:focus,textarea:focus{
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             width: 180px;
             height: 180px;
+            text-decoration: none;
         }
         
         .social-item:hover {
