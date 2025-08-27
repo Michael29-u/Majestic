@@ -415,7 +415,7 @@ input:focus,textarea:focus{
     text-align: center;
     max-width: 800px;
     width: 100%;
-    align-items: center;
+    
 }
 
 .socials-title {
@@ -436,6 +436,7 @@ input:focus,textarea:focus{
 .social-item {
     display: flex;
     align-items: center;
+    align-content: center;
     padding: 12px 20px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.1);
