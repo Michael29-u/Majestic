@@ -28,6 +28,15 @@
             });
         });
 
+    document.querySelectorAll('.social-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });     
+
 
   // Mobile nav
   const btn = document.querySelector('.nav-toggle');
