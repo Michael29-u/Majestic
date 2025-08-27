@@ -495,7 +495,7 @@ input:focus,textarea:focus{
         }
         
         .social-username {
-            color: white;
+            color: var(--accent-2);
             font-size: 1rem;
             font-weight: 500;
             text-shadow: 0 1px 3px rgba(0,0,0,0.2);
