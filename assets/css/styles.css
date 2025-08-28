@@ -716,27 +716,31 @@ input:focus,textarea:focus{
   background: var(--accent);
 }
 
+#messages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;  /* Scroll only messages section */
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 8px;
+  background: white;
+}
+
 #messages-list li {
   padding: 6px 8px;
-  background: white;
+  background: #ffeef2;
   border-radius: 6px;
   margin-bottom: 6px;
   font-size: 14px;
 
-  
-  word-wrap: break-word;   
+  /* prevent overflow */
+  word-wrap: break-word;   /* breaks long words */
   overflow-wrap: break-word;
   white-space: normal;     /* allows text to wrap */
 }
 
-
-#messages-list li {
-  padding: 6px 8px;
-  background: var(--accent-2);
-  border-radius: 6px;
-  margin-bottom: 6px;
-  font-size: 14px;
-}
 
 .gift-text {
   font-size: 13px;
