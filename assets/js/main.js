@@ -134,7 +134,8 @@
 })();
 
 
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+(function(){
+  import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
   // ✅ Replace with your own keys
   const SUPABASE_URL = "https://wbpwuntxsjcusqqqvxxw.supabase.co";
@@ -203,4 +204,4 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
     });
 
     closeBtn.addEventListener("click", () => popup.classList.add("hidden"));
-  }
+  }})();
