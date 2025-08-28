@@ -1,6 +1,4 @@
-
 (function(){
-  
   // Theme toggle with persistence
   const root = document.documentElement;
   const saved = localStorage.getItem('theme');
