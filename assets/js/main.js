@@ -1,4 +1,4 @@
-import "./birthday.js";
+import "birthday.js";
 (function(){
   // Theme toggle with persistence
   const root = document.documentElement;
