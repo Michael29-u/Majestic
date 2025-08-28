@@ -132,3 +132,55 @@
     });
   }
 })();
+
+
+(function(){
+  // 🎂 Birthday feature
+  const BIRTHDAY = "08-28"; // <-- change to your MM-DD
+
+  function isTodayBirthday() {
+    const today = new Date();
+    const mmdd = String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
+    return mmdd === BIRTHDAY;
+  }
+
+  const popup = document.getElementById("birthday-popup");
+  const form = document.getElementById("birthday-form");
+  const msgInput = document.getElementById("giftMessage");
+  const list = document.getElementById("messages-list");
+  const closeBtn = document.getElementById("close-popup");
+
+  function loadMessages(){
+    const stored = JSON.parse(localStorage.getItem("birthdayMessages")||"[]");
+    list.innerHTML = "";
+    stored.forEach(msg => {
+      const li = document.createElement("li");
+      li.textContent = msg;
+      list.appendChild(li);
+    });
+  }
+
+  function saveMessage(msg){
+    const stored = JSON.parse(localStorage.getItem("birthdayMessages")||"[]");
+    stored.push(msg);
+    localStorage.setItem("birthdayMessages", JSON.stringify(stored));
+    loadMessages();
+  }
+
+  if(popup && isTodayBirthday()){
+    popup.classList.remove("hidden");
+    loadMessages();
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const msg = msgInput.value.trim();
+      if(msg){
+        saveMessage(msg);
+        msgInput.value = "";
+      }
+    });
+
+    closeBtn.addEventListener("click", ()=> popup.classList.add("hidden"));
+  }
+})();
+
