@@ -2,7 +2,7 @@
 async function loadBirthdayWidget() {
   const placeholder = document.getElementById("birthday-placeholder");
   try {
-    const response = await fetch("/assets/components/birthday.html");
+    const response = await fetch("/birthday.html");
     const html = await response.text();
     placeholder.innerHTML = html;
 
