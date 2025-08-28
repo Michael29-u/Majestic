@@ -13,7 +13,7 @@ const msgInput = document.getElementById("giftMessage");
 const list = document.getElementById("messages-list");
 
 // 🎂 Your birthday (MM-DD)
-const BIRTHDAY = "08-27"; 
+const BIRTHDAY = "08-28"; 
 
 function isTodayBirthday() {
   const today = new Date();
