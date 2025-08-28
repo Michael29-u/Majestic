@@ -1,12 +1,10 @@
 // main.js
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-// 🔑 Your Supabase credentials
-const SUPABASE_URL = "https://wbpwuntxsjcusqqqvxxw.supabase.co";
-const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndicHd1bnR4c2pjdXNxcXF2eHh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYzODI4NjcsImV4cCI6MjA3MTk1ODg2N30.nZ1WZu4nqL06pjsMj9TxETn18Zee4Jji1KXwb6trA4A";
+import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseUrl = 'https://wbpwuntxsjcusqqqvxxw.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 // 🎂 DOM Elements
 const toggleBtn = document.getElementById("birthday-toggle");
