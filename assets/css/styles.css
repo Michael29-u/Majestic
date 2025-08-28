@@ -421,7 +421,7 @@ input:focus,textarea:focus{
   }
   .quick-stats li{
     text-align:center;
-    align-content: center;
+    justify-content: center;
   }
 }
 
