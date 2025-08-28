@@ -66,28 +66,22 @@
 
 
 
-<!-- Birthday Popup -->
-<!-- 🎂 Birthday Widget -->
-<div id="birthday-widget">
-  <button id="birthday-toggle">🎉</button>
-
-  <div id="birthday-box" class="hidden">
-    <h3>🎂 Happy Birthday Michael!</h3>
-    <p>Send me wishes or gifts below 💝</p>
-    
+<!-- 🎂 Birthday Popup -->
+<div id="birthday-popup" class="birthday-popup hidden">
+  <div class="birthday-content">
+    <button id="close-popup" class="close-btn">&times;</button>
+    <h2>🎉 Happy Birthday!</h2>
+    <p>Send me a birthday message or a gift 🎁</p>
     <form id="birthday-form">
       <input type="text" id="giftMessage" placeholder="Write your message..." required />
-      <button type="submit">Send 🎁</button>
+      <button type="submit">Send</button>
     </form>
-
-    <h4>Messages</h4>
+    <h3>Messages</h3>
     <ul id="messages-list"></ul>
-
-    <p><strong>Send Money:</strong><br>
-      📱 <span id="momo-number">+233 55 123 4567</span>
-    </p>
+    <p>💳 Want to send a gift? Send to: <b>+233 55 123 4567</b></p>
   </div>
 </div>
+
 
 
 <footer class="site-footer">
