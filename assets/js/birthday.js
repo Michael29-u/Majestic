@@ -14,7 +14,7 @@ const list = document.getElementById("messages-list");
 const closeBtn = document.getElementById("close-popup");
 
 // 🎂 Birthday check
-const BIRTHDAY = "08-27"; // <-- change to your MM-DD
+const BIRTHDAY = "08-28"; // <-- change to your MM-DD
 function isTodayBirthday() {
   const today = new Date();
   const mmdd = String(today.getMonth() + 1).padStart(2, "0") + "-" + String(today.getDate()).padStart(2, "0");
