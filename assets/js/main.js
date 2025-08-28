@@ -135,20 +135,16 @@
 
 
 (function(){
-  // 🎂 Birthday feature
-  const BIRTHDAY = "08-28"; // <-- change to your MM-DD
+  // 🎂 Birthday setup
+  const BIRTHDAY = "08-27"; // change to your MM-DD
+  const today = new Date();
+  const mmdd = String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
 
-  function isTodayBirthday() {
-    const today = new Date();
-    const mmdd = String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
-    return mmdd === BIRTHDAY;
-  }
-
-  const popup = document.getElementById("birthday-popup");
+  const toggleBtn = document.getElementById("birthday-toggle");
+  const box = document.getElementById("birthday-box");
   const form = document.getElementById("birthday-form");
   const msgInput = document.getElementById("giftMessage");
   const list = document.getElementById("messages-list");
-  const closeBtn = document.getElementById("close-popup");
 
   function loadMessages(){
     const stored = JSON.parse(localStorage.getItem("birthdayMessages")||"[]");
@@ -167,9 +163,13 @@
     loadMessages();
   }
 
-  if(popup && isTodayBirthday()){
-    popup.classList.remove("hidden");
+  if(mmdd === BIRTHDAY){
+    // show widget only on birthday
     loadMessages();
+
+    toggleBtn.addEventListener("click", () => {
+      box.classList.toggle("hidden");
+    });
 
     form.addEventListener("submit", e => {
       e.preventDefault();
@@ -179,8 +179,8 @@
         msgInput.value = "";
       }
     });
-
-    closeBtn.addEventListener("click", ()=> popup.classList.add("hidden"));
+  } else {
+    // hide if not birthday
+    document.getElementById("birthday-widget").style.display = "none";
   }
 })();
-
