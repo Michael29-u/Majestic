@@ -42,16 +42,31 @@
       </ul>
     </div>
     <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 300 300" role="img" aria-label="Abstract blob">
-        <defs>
-          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0%" stop-color="var(--accent)"/>
-            <stop offset="100%" stop-color="var(--accent-2)"/>
-          </linearGradient>
-        </defs>
-        <path d="M214 44c22 13 41 31 50 55 9 25 7 55-7 77-14 23-40 37-66 49-26 11-52 20-77 13-24-7-46-29-57-54-11-25-11-53 0-80 11-26 33-50 60-63 26-12 58-12 97 2z" fill="url(#g1)"/>
-      </svg>
-    </div>
+  <svg viewBox="0 0 300 300" role="img" aria-label="Abstract blob" width="300" height="300">
+    <defs>
+      <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="var(--accent)"/>
+        <stop offset="100%" stop-color="var(--accent-2)"/>
+      </linearGradient>
+
+      <!-- Clip path uses the exact same blob -->
+      <clipPath id="blobClip">
+        <path d="M214 44c22 13 41 31 50 55 9 25 7 55-7 77-14 23-40 37-66 49-26 11-52 20-77 13-24-7-46-29-57-54-11-25-11-53 0-80 11-26 33-50 60-63 26-12 58-12 97 2z"/>
+      </clipPath>
+    </defs>
+
+    <!-- Optional: background blob with gradient -->
+    <path d="M214 44c22 13 41 31 50 55 9 25 7 55-7 77-14 23-40 37-66 49-26 11-52 20-77 13-24-7-46-29-57-54-11-25-11-53 0-80 11-26 33-50 60-63 26-12 58-12 97 2z"
+          fill="url(#g1)"/>
+
+    <!-- Image clipped to the blob -->
+    <image href="assets/img/pro.jpg"
+           x="0" y="0" width="300" height="300"
+           preserveAspectRatio="xMidYMid slice"
+           clip-path="url(#blobClip)"/>
+  </svg>
+</div>
+
   </section>
 
   <section class="features container">
