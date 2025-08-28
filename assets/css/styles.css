@@ -721,7 +721,7 @@ input:focus,textarea:focus{
   padding: 0;
   margin: 0;
   max-height: 150px;  /* Scroll only messages section */
-  overflow-y: auto;
+  overflow-y: none;
   border: 1px solid #eee;
   border-radius: 6px;
   padding: 8px;
