@@ -8,7 +8,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script defer src="assets/js/main.js"></script>
-
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "hpofh1DMDMjOFtvka",
+      });
+   })();
+</script>
 </head>
 <body>
 <div id="birthday-countdown" style="text-align:center; margin:20px; font-weight:bold;"></div>
@@ -55,7 +64,7 @@
         <small class="error" data-error-for="message"></small>
       </div>
       <div class="form-actions">
-        <button class="btn primary" type="submit">Send Message</button>
+        <button class="btn primary" type="submit" onclick="sendMail()">Send Message</button>
         <p class="form-status" role="status" aria-live="polite"></p>
       </div>
     </form>
@@ -136,6 +145,7 @@
 </div>
 </footer>
 
+<script src="assets/js/sendmail.js"></script>
 <script type="module" src="assets/js/birthday.js"></script>
 </body>
 </html>
