@@ -123,7 +123,7 @@
       });
       const status = form.querySelector('.form-status');
       if(ok){
-        status.textContent = 'Thanks! Your message was validated locally (no backend configured).';
+        status.textContent = 'Thanks! Your message has been sent successfully.';
         form.reset();
       }else{
         status.textContent = 'Please fix the errors above and try again.';

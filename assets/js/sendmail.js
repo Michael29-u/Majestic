@@ -7,6 +7,6 @@ function sendMail() {
   
    } 
 
-    emailjs.send("service_ogljbl6","template_9aukr5p",params).then(alert("Message sent successfully!!"))
+    emailjs.send("service_ogljbl6","template_9aukr5p",params)
     
   } 
