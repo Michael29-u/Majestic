@@ -660,7 +660,7 @@ input:focus,textarea:focus{
 }
 
 #birthday-toggle {
-  background: #ff4d6d;
+  background: var(--accent-2);;
   border: none;
   padding: 12px 18px;
   font-size: 20px;
@@ -675,7 +675,7 @@ input:focus,textarea:focus{
 }
 
 #birthday-box {
-  background: white;
+  background: var(--accent-2);;
   border-radius: 12px;
   padding: 20px;
   width: 300px;
@@ -705,7 +705,7 @@ input:focus,textarea:focus{
 }
 
 #birthday-form .submit {
-  background: #4CAF50;
+  background: var(--accent-2);
   border: none;
   color: white;
   padding: 8px 12px;
