@@ -419,7 +419,7 @@ input:focus,textarea:focus{
     align-items:center;
     justify-content:center;
   }
-  .quick-stats li{
+  .quick-stats{
     text-align:center;
     justify-content: center;
   }
