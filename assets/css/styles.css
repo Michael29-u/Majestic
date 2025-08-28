@@ -650,3 +650,65 @@ input:focus,textarea:focus{
         }
 
 
+/* 🎂 Birthday Widget Styles */
+#birthday-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+#birthday-toggle {
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#birthday-box {
+  background: white;
+  border: 2px solid #ff4081;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 10px;
+  width: 260px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#birthday-box.hidden {
+  display: none;
+}
+
+#birthday-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#giftMessage {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#messages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#messages-list li {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
