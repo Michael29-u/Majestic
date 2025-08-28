@@ -687,7 +687,7 @@ input:focus,textarea:focus{
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 1.5rem;
 }
 .submit:hover {
   background: var(--bg-2);
@@ -703,4 +703,12 @@ input:focus,textarea:focus{
 .name{
   color: var(--bg);
   font-weight: 600;
+}
+#giftMessage {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg-2);
 }
