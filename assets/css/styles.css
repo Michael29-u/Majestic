@@ -713,7 +713,7 @@ input:focus,textarea:focus{
   cursor: pointer;
 }
 #birthday-form .submit:hover {
-  background: #45a049;
+  background: var(--accent);
 }
 
 #messages-list {
@@ -725,7 +725,7 @@ input:focus,textarea:focus{
   border: 1px solid #eee;
   border-radius: 6px;
   padding: 8px;
-  background: #fafafa;
+  background: var(--bg);
 }
 
 #messages-list li {
