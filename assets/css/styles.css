@@ -338,15 +338,9 @@ body{
 .project-content{
   padding:1rem
 }
-.contact-aside {
-  border:1px solid var(--border);
-  background:var(--card);
-  border-radius:16px;
-  padding:1rem;
-  color:var(--muted);
-  font-size:.9rem;
-  line-height:1.4;
+.contact-aside li{
   text-decoration: none;
+  list-style: none;
 }
 
 .contact-section{
