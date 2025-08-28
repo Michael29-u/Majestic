@@ -718,7 +718,7 @@ input:focus,textarea:focus{
 
 #messages-list li {
   padding: 6px 8px;
-  background: var(--accent-2);
+  background: white;
   border-radius: 6px;
   margin-bottom: 6px;
   font-size: 14px;
