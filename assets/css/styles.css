@@ -650,65 +650,103 @@ input:focus,textarea:focus{
         }
 
 
+/* Birthday Widget */
 #birthday-widget {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  text-align: center;
-  z-index: 1000;
+  font-family: "Segoe UI", sans-serif;
+  z-index: 9999;
 }
 
 #birthday-toggle {
-  font-size: 24px;
-  padding: 10px 15px;
-  border-radius: 50%;
+  background: #ff4d6d;
   border: none;
-  background:var(--accent-2);
-  color: #fff;
+  padding: 12px 18px;
+  font-size: 20px;
+  border-radius: 50%;
   cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+#birthday-toggle:hover {
+  transform: scale(1.1);
 }
 
 #birthday-box {
-  width: 250px;
-  background:var(--accent-2);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  max-height: 400px; /* Keeps box compact */
+  overflow-y: auto; /* Scroll when content grows */
   margin-top: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+#birthday-box h3 {
+  margin-top: 0;
+  color: #ff4d6d;
+  font-size: 18px;
+}
+
+#birthday-form {
+  display: flex;
+  margin: 10px 0;
+  gap: 8px;
+}
+
+#birthday-form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+#birthday-form .submit {
+  background: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#birthday-form .submit:hover {
+  background: #45a049;
+}
+
+#messages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;  /* Scroll only messages section */
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 8px;
+  background: #fafafa;
+}
+
+#messages-list li {
+  padding: 6px 8px;
+  background: #ffeef2;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.gift-text {
+  font-size: 13px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.momo-number {
+  font-weight: bold;
+  color: #333;
 }
 
 .hidden {
   display: none;
-}
-.submit {
-  background: var(--bg);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-.submit:hover {
-  background: var(--bg-2);
-}
-#messages-list {
-  list-style: none;
-  padding: 0;
-  max-height: 150px;
-  overflow-y: auto;
-  text-align: left;
-  margin: 10px 0 0 0;
-}
-.name{
-  color: var(--bg);
-  font-weight: 600;
-}
-#giftMessage {
-  padding: 8px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 1rem;
-  color: var(--text);
-  background: var(--bg-2);
 }
