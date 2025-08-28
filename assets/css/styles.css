@@ -438,7 +438,7 @@ input:focus,textarea:focus{
     justify-content: center;
   }
   .side {
-   text-align: center;
+   text-align: start;
   }
 }
 
