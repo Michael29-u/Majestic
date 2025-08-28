@@ -68,7 +68,7 @@ function startCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    countdownEl.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s left`;
+    countdownEl.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s left To My Birthday`;
   }, 1000);
 }
 
