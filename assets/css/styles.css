@@ -437,6 +437,9 @@ input:focus,textarea:focus{
     text-align:center;
     justify-content: center;
   }
+  .side {
+   text-align: center;
+  }
 }
 
        .socials-container {
