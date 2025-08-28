@@ -417,9 +417,11 @@ input:focus,textarea:focus{
   }
   .cta{
     align-items:center;
+    justify-content:center;
   }
   .quick-stats li{
-    text-align:center
+    text-align:center;
+    align-content: center;
   }
 }
 
