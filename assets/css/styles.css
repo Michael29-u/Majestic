@@ -663,14 +663,14 @@ input:focus,textarea:focus{
   padding: 10px 15px;
   border-radius: 50%;
   border: none;
-  background: #ff4081;
+  background:var(--accent-2);
   color: #fff;
   cursor: pointer;
 }
 
 #birthday-box {
   width: 250px;
-  background: #fff;
+  background:var(--accent-2);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   padding: 15px;
