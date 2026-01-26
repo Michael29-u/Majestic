@@ -15,7 +15,7 @@ const list = document.getElementById("messages-list");
 const countdownEl = document.getElementById("birthday-countdown");
 
 // 🎂 Your birthday (MM-DD)
-const BIRTHDAY = "08-29";
+const BIRTHDAY = "01-26";
 
 // === Utility Functions ===
 
