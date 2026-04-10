@@ -212,7 +212,7 @@ body {
 
 .marquee-section {
   overflow: hidden;
-  padding: 1.5rem 0;
+  padding: 1.5rem 4rem;
   background: var(--bg-2);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -221,7 +221,7 @@ body {
   display: flex;
   gap: 1.5rem;
   white-space: nowrap;
-  animation: marquee 20s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 .marquee-track span {
   font-size: 1.1rem;
