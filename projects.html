@@ -1,89 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MJ — Portfolio</title>
-<link rel="icon" type="image/png" href="assets/img/mic.jpeg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/styles.css" />
-<script src="config.js"></script>
-<script defer src="assets/js/components.js"></script>
-<script defer src="assets/js/main.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MJ — Studios</title>
+    <link rel="icon" type="image/png" href="assets/img/majword.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="config.js"></script>
+    <script defer src="assets/js/components.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <header data-component="header"></header>
 
-</head>
-<body>
+    <main class="container">
+      <section class="page-header">
+        <h1>Projects</h1>
+        <p>Selected work. Filter by type to explore.</p>
+        <div class="filters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="web">Web</button>
+          <button class="chip" data-filter="dashboard">Dashboard</button>
+          <button class="chip" data-filter="chatbot">Chatbot</button>
+        </div>
+      </section>
 
-<header data-component="header"></header>
+      <section class="grid projects" id="projects-grid">
+        <article class="project-card" data-type="dashboard" id="hr-dashboard">
+          <div class="project-thumb"></div>
+          <div class="project-content">
+            <h3>Leave Management System</h3>
+            <p>
+              Collaborated with a friend to design and develop a Leave
+              Management System, streamlining employee leave requests and
+              approvals.
+            </p>
+            <a class="btn small" href="#" aria-disabled="true">Case Study</a>
+          </div>
+        </article>
+        <article class="project-card" data-type="chatbot">
+          <div class="project-thumb"></div>
+          <div class="project-content">
+            <h3>Malaria Triage Assistant</h3>
+            <p>
+              Chat-based assessment and booking flow connected to PHP/MySQL
+              backend.
+            </p>
+            <a class="btn small" href="#" aria-disabled="true">Live Demo</a>
+          </div>
+        </article>
+        <article class="project-card" data-type="web">
+          <div class="project-thumb"></div>
+          <div class="project-content">
+            <h3>Portfolio Template</h3>
+            <p>Clean, responsive portfolio with dark mode and filters.</p>
+            <a class="btn small" href="#" aria-disabled="true">Source</a>
+          </div>
+        </article>
+        <article class="project-card" data-type="web">
+          <div class="project-thumb"></div>
+          <div class="project-content">
+            <h3>To Do List</h3>
+            <p>
+              A To-Do List app built with React that lets users add, edit, and
+              delete tasks, showcasing my skills in React components and state
+              management.
+            </p>
+            <a
+              class="btn small"
+              href="https://to-do-sigma-rouge.vercel.app/"
+              aria-disabled="true"
+              >Live Demo</a
+            >
+          </div>
+        </article>
+        <article class="project-card" data-type="web">
+          <div class="project-thumb"></div>
+          <div class="project-content">
+            <h3>Recipe Finder</h3>
+            <p>
+              A web application that helps users discover new recipes based on
+              ingredients, dietary preferences.
+            </p>
+            <a
+              class="btn small"
+              href="https://recipe-finder-chi-beige.vercel.app/"
+              aria-disabled="true"
+              >Live Demo</a
+            >
+          </div>
+        </article>
+        <article class="project-card" data-type="web">
+          <div class="project-thumb"></div>
+          <div class="project-content">
+            <h3>Church Website</h3>
+            <p>
+              A website providing information and resources to the congregation.
+            </p>
+            <a
+              class="btn small"
+              href="https://michael29-u.github.io/NewB/"
+              aria-disabled="true"
+              >Live Demo</a
+            >
+          </div>
+        </article>
+      </section>
+    </main>
 
-<main class="container">
-  <section class="page-header">
-    <h1>Projects</h1>
-    <p>Selected work. Filter by type to explore.</p>
-    <div class="filters">
-      <button class="chip active" data-filter="all">All</button>
-      <button class="chip" data-filter="web">Web</button>
-      <button class="chip" data-filter="dashboard">Dashboard</button>
-      <button class="chip" data-filter="chatbot">Chatbot</button>
-    </div>
-  </section>
+    <div data-component="birthday-widget"></div>
 
-  <section class="grid projects" id="projects-grid">
-    <article class="project-card" data-type="dashboard" id="hr-dashboard">
-      <div class="project-thumb"></div>
-      <div class="project-content">
-        <h3>Leave Management System</h3>
-        <p>Collaborated with a friend to design and develop a Leave Management System, streamlining employee leave requests and approvals.</p>
-        <a class="btn small" href="#" aria-disabled="true">Case Study</a>
-      </div>
-    </article>
-    <article class="project-card" data-type="chatbot">
-      <div class="project-thumb"></div>
-      <div class="project-content">
-        <h3>Malaria Triage Assistant</h3>
-        <p>Chat-based assessment and booking flow connected to PHP/MySQL backend.</p>
-        <a class="btn small" href="#" aria-disabled="true">Live Demo</a>
-      </div>
-    </article>
-    <article class="project-card" data-type="web">
-      <div class="project-thumb"></div>
-      <div class="project-content">
-        <h3>Portfolio Template</h3>
-        <p>Clean, responsive portfolio with dark mode and filters.</p>
-        <a class="btn small" href="#" aria-disabled="true">Source</a>
-      </div>
-    </article>
-    <article class="project-card" data-type="web">
-      <div class="project-thumb"></div>
-      <div class="project-content">
-        <h3>To Do List</h3>
-        <p>A To-Do List app built with React that lets users add, edit, and delete tasks, showcasing my skills in React components and state management.</p>
-        <a class="btn small" href="https://to-do-sigma-rouge.vercel.app/" aria-disabled="true">Live Demo</a>
-      </div>
-    </article>
-    <article class="project-card" data-type="web">
-      <div class="project-thumb"></div>
-      <div class="project-content">
-        <h3>Recipe Finder</h3>
-        <p>A web application that helps users discover new recipes based on ingredients, dietary preferences.</p>
-        <a class="btn small" href="https://recipe-finder-chi-beige.vercel.app/" aria-disabled="true">Live Demo</a>
-      </div>
-    </article>
-    <article class="project-card" data-type="web">
-      <div class="project-thumb"></div>
-      <div class="project-content">
-        <h3>Church Website</h3>
-        <p>A website providing information and resources to the congregation.</p>
-        <a class="btn small" href="https://michael29-u.github.io/NewB/" aria-disabled="true">Live Demo</a>
-      </div>
-    </article>
-  </section>
-</main>
+    <footer data-component="footer"></footer>
 
-<div data-component="birthday-widget"></div>
-
-<footer data-component="footer"></footer>
-
-<script type="module" src="assets/js/birthday.js"></script>
-</body>
+    <script type="module" src="assets/js/birthday.js"></script>
+  </body>
 </html>
