@@ -1,175 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MJ — Portfolio</title>
-<link rel="icon" type="image/png" href="assets/img/mic.jpeg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/styles.css" />
-<script defer src="assets/js/main.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MJ — Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/img/mic.jpeg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/components.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <header data-component="header"></header>
 
-</head>
-<body>
+    <main>
+      <section class="hero container">
+        <div class="hero-text">
+          <h1 class="title">
+            Hi, I'm <span class="accent">Majestic</span> —
+            <span
+              class="typewriter"
+              data-rotate='["FullStack Web Developer.","Problem Solver.", "Mobile App Developer", "Exploring IoT"]'
+              >Web Developer.</span
+            >
+          </h1>
+          <p class="subtitle">
+            I craft clean, responsive websites and web apps. Have a look around!
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="projects.html">View Projects</a>
+            <a class="btn" href="contact.html">Contact Me</a>
+          </div>
+          <ul class="quick-stats">
+            <li><strong>3+</strong><span>Years Experience</span></li>
+            <li><strong>7+</strong><span>Projects</span></li>
+            <li><strong>0</strong><span>Happy Clients</span></li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg
+            viewBox="0 0 300 300"
+            role="img"
+            aria-label="Abstract blob"
+            width="300"
+            height="300">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent)" />
+                <stop offset="100%" stop-color="var(--accent-2)" />
+              </linearGradient>
+              <clipPath id="circle-crop">
+                <circle cx="150" cy="150" r="100" />
+              </clipPath>
+            </defs>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="logo" href="index.html"><span class="logo-mark">MJ</span><span class="logo-text">Portfolio</span></a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav" data-nav>
-      <a href="index.html" data-navlink>Home</a>
-      <a href="about.html" data-navlink>About</a>
-      <a href="projects.html" data-navlink>Projects</a>
-      <a href="contact.html" data-navlink>Contact</a>
-      <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>👀</button>
-    </nav>
-  </div>
-</header>
-<div id="birthday-countdown" style="text-align:center; margin:20px; font-weight:bold;"></div>
-<main>
-  <section class="hero container">
-    <div class="hero-text">
-      <h1 class="title">Hi, I'm <span class="accent">Majestic</span> — <span class="typewriter" data-rotate='["Web Developer.","Designer.","Problem Solver.", "Mobile App Developer"]'>Web Developer.</span></h1>
-      <p class="subtitle">I craft clean, responsive websites and web apps. Have a look around!</p>
-      <div class="cta">
-        <a class="btn primary" href="projects.html">View Projects</a>
-        <a class="btn" href="contact.html">Contact Me</a>
-      </div>
-      <ul class="quick-stats">
-        <li><strong>3+</strong><span>Years Experience</span></li>
-        <li><strong>7+</strong><span>Projects</span></li>
-        <li><strong>0</strong><span>Happy Clients</span></li>
-      </ul>
-    </div>
-   <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 300 300" role="img" aria-label="Abstract blob" width="300" height="300">
-        <defs>
-          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0%" stop-color="var(--accent)"/>
-            <stop offset="100%" stop-color="var(--accent-2)"/>
-          </linearGradient>
-        </defs>
+            <!-- Gradient border/background circle -->
+            <circle cx="150" cy="150" r="105" fill="url(#g1)" />
 
-        <!-- Background blob -->
-        <path d="M214 44c22 13 41 31 50 55 9 25 7 55-7 77-14 23-40 37-66 49-26 11-52 20-77 13-24-7-46-29-57-54-11-25-11-53 0-80 11-26 33-50 60-63 26-12 58-12 97 2z"
-              fill="url(#g1)"/>
-        
-         <!--   //Image sitting on top 
-            <image href="assets/img/pro.jpg"
-                  x="75" y="75" width="150" height="150"
+            <!-- Profile image as circle -->
+            <image
+              href="assets/img/pro.jpg"
+              x="50"
+              y="50"
+              width="200"
+              height="200"
               preserveAspectRatio="xMidYMid slice"
-              clip-path="circle(50% at 50% 50%)"/>
-          -->
-      </svg>
-    </div>
-
-
-  </section>
-
-  <section class="features container">
-    <h2 class="section-title">What I Do</h2>
-    <div class="grid cards">
-      <article class="card">
-        <h3>Responsive Web Design</h3>
-        <p>Pixel-perfect, mobile-first experiences with semantic HTML and modern CSS.</p>
-      </article>
-      <article class="card">
-        <h3>UI/UX Prototyping</h3>
-        <p>From wireframes to delightful microinteractions that users love.</p>
-      </article>
-      <article class="card">
-        <h3>Performance & Accessibility</h3>
-        <p>Fast loads, smooth interactions, and inclusive design baked in.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="highlight container">
-    <div class="highlight-inner">
-      <div>
-        <h2>Featured Project</h2>
-        <p>A Leave management system.</p>
-        <a class="btn primary" href="projects.html#hr-dashboard">See details</a>
-      </div>
-      <div class="highlight-visual">
-        <div class="browser">
-          <div class="dots"></div>
-          <div class="bars"></div>
-          <div class="page-skeleton"></div>
+              clip-path="url(#circle-crop)" />
+          </svg>
         </div>
-      </div>
-    </div>
-  </section>
-</main>
+      </section>
 
-
-<!-- 🎂 Birthday Widget -->
-<div id="birthday-widget">
-  <button id="birthday-toggle">🎉</button>
-
-  <div id="birthday-box" class="hidden">
-    <h3>🎂 Happy Birthday Michael!</h3>
-    <p>Send me wishes or gifts below 💝</p>
-    
-    <form id="birthday-form">
-      <input type="text" id="giftMessage" placeholder="Write your message..." required />
-      <button type="submit" class="submit">Send 🎁</button>
-    </form>
-
-    <h4>Messages</h4>
-    <ul id="messages-list"></ul>
-
-    <p><strong>Please if any Gift👇👇👇</strong><br>
-      📱 <span id="momo-number">0241877694</span>
-      Name: <span id="momo-number">Michael Kwesi Eyiah</span>
-    </p>
-  </div>
-</div>
-
-
-
-
-
-
-
-<footer class="site-footer">
-   <div class="socials-container">
-        <h3 class="socials-title">Follow Me On Social Media</h3>
-        <div class="socials-grid">
-            <a href="http://www.linkedin.com/in/michael-kwesi-eyiah-3768a832b" target="_blank" class="social-item">
-                <div class="social-icon linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </div>
-                <span class="social-username">@Majestic-reciter</span>
-            </a>
-            
-            <a href="https://www.instagram.com/majestic_reciter?igsh=OThqNHh6MnhqNnA4" target="_blank" class="social-item">
-                <div class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <span class="social-username">@Majestic_reciter</span>
-            </a>
-            
-            <a href="http://tiktok.com/@majestic_reciter" target="_blank" class="social-item">
-                <div class="social-icon tiktok">
-                    <i class="fab fa-tiktok"></i>
-                </div>
-                <span class="social-username">@Majestic_reciter</span>
-            </a>
-            
-            <a href="http://t.me/Majestictherecitor" target="_blank" class="social-item">
-                <div class="social-icon telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </div>
-                <span class="social-username">@Majestic reciter</span>
-            </a>
+      <section class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+          <span>HTML5</span><span>·</span><span>CSS3</span><span>·</span
+          ><span>JavaScript</span><span>·</span><span>React</span><span>·</span
+          ><span>PHP</span><span>·</span><span>MySQL</span><span>·</span
+          ><span>FlutterFlow</span><span>·</span><span>Git</span>
         </div>
-    </div>
-<div class="container footer-p">
-    <p>© <span id="year"></span> MJ Portfolio · Built with HTML, CSS & JS</p>
-</div>
-</footer>
+      </section>
 
-<script type="module" src="assets/js/birthday.js"></script>
-</body>
+      <section class="features container">
+        <h2 class="section-title">What I Do</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Responsive Web Design</h3>
+            <p>
+              Pixel-perfect, mobile-first experiences with semantic HTML and
+              modern CSS.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="highlight container">
+        <div class="highlight-inner">
+          <div>
+            <h2>Featured Project</h2>
+            <p>A Leave management system.</p>
+            <a class="btn primary" href="projects.html#hr-dashboard"
+              >See details</a
+            >
+          </div>
+          <div class="highlight-visual">
+            <div class="browser">
+              <div class="dots"></div>
+              <div class="bars"></div>
+              <div class="page-skeleton"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-component="birthday-widget"></div>
+
+    <footer data-component="footer"></footer>
+
+    <script type="module" src="assets/js/birthday.js"></script>
+  </body>
 </html>

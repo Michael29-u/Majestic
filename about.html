@@ -1,149 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MJ — Portfolio</title>
-<link rel="icon" type="image/png" href="assets/img/mic.jpeg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/styles.css" />
-<script defer src="assets/js/main.js"></script>
-
-</head>
-<body>
-
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="logo" href="index.html"><span class="logo-mark">MJ</span><span class="logo-text">Portfolio</span></a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav" data-nav>
-      <a href="index.html" data-navlink>Home</a>
-      <a href="about.html" data-navlink>About</a>
-      <a href="projects.html" data-navlink>Projects</a>
-      <a href="contact.html" data-navlink>Contact</a>
-      <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>👀</button>
-    </nav>
-  </div>
-</header>
-<div id="birthday-countdown" style="text-align:center; margin:20px; font-weight:bold;"></div>
-<main class="container">
-  <section class="page-header">
-    <h1>About Me</h1>
-    <p>Developer based in Accra, focused on building useful, usable web tools.</p>
-  </section>
-
-  <section class="about-grid">
-    <div>
-      <h2>Bio</h2>
-      <p>I am from Mumford, a town in the Central Region of Ghana, where I attended Mumford Community ‘B’ JHS. I am now based in Accra.</p>
-      <p>
-        I am also part of the FlutterFlow Student Ambassadors Ghana, where I hold the position of Technical Assistant. 
-        This role has allowed me to contribute to building innovative solutions while engaging with a wider network of tech enthusiasts.
-      </p>
-      <p>When I’m not coding, I enjoy exploring tech communities, mentoring others, sketching UI ideas, and learning new languages such as Spanish, Chinese, and French.</p>
-      <p>Soy de Mumford, un pueblo de la Región Central de Ghana, donde estudié la escuela secundaria comunitaria Mumford "B". Ahora vivo en Accra.</p>
-    </div>
-    <aside class="about-aside">
-      <h3>Skills</h3>
-      <ul class="tags">
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>PHP</li>
-        <li>MySQL</li>
-        <li>Responsive Design</li>
-        <li>React</li>
-        <li>FlutterFlow</li>
-      </ul>
-      <h3>Tools</h3>
-      <ul class="tags">
-        <li>Git</li>
-        <li>Github</li>
-        <li>VS Code</li>
-        <li>Figma</li>
-        <li>XAMPP</li>
-        <li>Coursor</li>
-      </ul>
-    </aside>
-  </section>
-
-  <section>
-    <h2>Timeline</h2>
-    <ol class="timeline">
-      <li><span>2025</span> Built malaria triage chatbot for ATU Clinic.(Final year project)</li>
-      <li><span>2024</span> A ghost rider word hunt game.</li>
-      <li><span>2023</span> Clone YouTube with HTML, CSS and JAVASCRIPT.</li>
-      <li><span>2022</span> Started Learning Web Development and building on the web professionally.</li>
-    </ol>
-  </section>
-</main>
-
-<!-- 🎂 Birthday Widget -->
-<div id="birthday-widget">
-  <button id="birthday-toggle">🎉</button>
-
-  <div id="birthday-box" class="hidden">
-    <h3>🎂 Happy Birthday Michael!</h3>
-    <p>Send me wishes or gifts below 💝</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MJ — Portfolio</title>
+    <link rel="favicon" type="image/png" href="assets/img/mic.jpeg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/components.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <header data-component="header"></header>
     
-    <form id="birthday-form">
-      <input type="text" id="giftMessage" placeholder="Write your message..." required />
-      <button type="submit" class="submit">Send 🎁</button>
-    </form>
+    <main class="container">
+      <section class="page-header">
+        <h1>About Me</h1>
+        <p>
+          Developer based in Accra, focused on building useful, usable web
+          tools.
+        </p>
+      </section>
 
-    <h4>Messages</h4>
-    <ul id="messages-list"></ul>
-
-    <p><strong>Please if any Gift👇👇👇</strong><br>
-      📱 <span id="momo-number">0241877694</span><br>
-      <span class="name">Name: </span><span id="momo-number">Michael Kwesi Eyiah</span>
-    </p>
-  </div>
-</div>
-
-
-
-
-
-
-<footer class="site-footer">
-   <div class="socials-container">
-        <h3 class="socials-title">Follow Me On Social Media</h3>
-        <div class="socials-grid">
-            <a href="http://www.linkedin.com/in/michael-kwesi-eyiah-3768a832b" target="_blank" class="social-item">
-                <div class="social-icon linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </div>
-                <span class="social-username">@Majestic-reciter</span>
-            </a>
-            
-            <a href="https://www.instagram.com/majestic_reciter?igsh=OThqNHh6MnhqNnA4" target="_blank" class="social-item">
-                <div class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <span class="social-username">@Majestic_reciter</span>
-            </a>
-            
-            <a href="http://tiktok.com/@majestic_reciter" target="_blank" class="social-item">
-                <div class="social-icon tiktok">
-                    <i class="fab fa-tiktok"></i>
-                </div>
-                <span class="social-username">@Majestic_reciter</span>
-            </a>
-            
-            <a href="http://t.me/Majestictherecitor" target="_blank" class="social-item">
-                <div class="social-icon telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </div>
-                <span class="social-username">@Majestic reciter</span>
-            </a>
+      <section class="about-grid">
+        <div>
+          <h2>Bio</h2>
+          <p>
+            I am from Mumford, a town in the Central Region of Ghana, where I
+            attended Mumford Community ‘B’ JHS. I am now based in Accra.
+          </p>
+          <p>
+            I am also part of the FlutterFlow Student Ambassadors Ghana, where I
+            hold the position of Technical Assistant. This role has allowed me
+            to contribute to building innovative solutions while engaging with a
+            wider network of tech enthusiasts.
+          </p>
+          <p>
+            When I’m not coding, I enjoy exploring tech communities, mentoring
+            others, sketching UI ideas, and learning new languages such as
+            Spanish, Chinese, and French.
+          </p>
+          <p>
+            Soy de Mumford, un pueblo de la Región Central de Ghana, donde
+            estudié la escuela secundaria comunitaria Mumford "B". Ahora vivo en
+            Accra.
+          </p>
         </div>
-    </div>
-<div class="container footer-p">
-    <p>© <span id="year"></span> MJ Portfolio · Built with HTML, CSS & JS</p>
-</div>
-</footer>
+        <aside class="about-aside">
+          <h3>Skills</h3>
+          <ul class="tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>Responsive Design</li>
+            <li>React</li>
+            <li>FlutterFlow</li>
+          </ul>
+          <h3>Tools</h3>
+          <ul class="tags">
+            <li>Git</li>
+            <li>Github</li>
+            <li>VS Code</li>
+            <li>XAMPP</li>
+          </ul>
+        </aside>
+      </section>
 
-<script type="module" src="assets/js/birthday.js"></script>
-</body>
+      <section>
+        <h2>Timeline</h2>
+        <ol class="timeline">
+          <li>
+            <span>2025</span> Built malaria triage chatbot for ATU Clinic.(Final
+            year project)
+          </li>
+          <li><span>2024</span> A ghost rider word hunt game.</li>
+          <li>
+            <span>2023</span> Clone YouTube with HTML, CSS and JAVASCRIPT.
+          </li>
+          <li>
+            <span>2022</span> Started Learning Web Development and building on
+            the web professionally.
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <div data-component="birthday-widget"></div>
+
+    <footer data-component="footer"></footer>
+
+    <script type="module" src="assets/js/birthday.js"></script>
+  </body>
 </html>
