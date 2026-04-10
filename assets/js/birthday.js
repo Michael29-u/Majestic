@@ -1,10 +1,7 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-// 🔑 Replace with your own Supabase keys
-const SUPABASE_URL = "https://wvdejofhyntttzmqnjuw.supabase.co";
-const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind2ZGVqb2ZoeW50dHR6bXFuanV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4MDAwNzEsImV4cCI6MjA4NjM3NjA3MX0.FMNjy_A9niWM4e5oDb-HKSA_1PS3Gr2LYd6qpHYPJj8";
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const config = window.API_CONFIG || {};
+const supabase = createClient(config.supabaseUrl, config.supabaseAnonKey);
 
 // 🎂 Your birthday (MM-DD)
 const BIRTHDAY = "08-29";

@@ -1,78 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MJ — Portfolio</title>
-<link rel="icon" type="image/png" href="assets/img/mic.jpeg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MJ — Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/img/mic.jpeg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <link rel="stylesheet" href="assets/css/styles.css" />
+<script src="config.js"></script>
 <script defer src="assets/js/components.js"></script>
 <script defer src="assets/js/main.js"></script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "hpofh1DMDMjOFtvka",
-      });
-   })();
+    (function(){
+       const config = window.API_CONFIG || {};
+       emailjs.init({
+         publicKey: config.emailjsPublicKey,
+       });
+    })();
 </script>
-</head>
-<body>
+  </head>
+  <body>
+    <header data-component="header"></header>
+    <main class="container">
+      <section class="page-header">
+        <h1>Contact</h1>
+        <p>Have a project in mind? Let's talk.</p>
+      </section>
 
-<header data-component="header"></header>
-<main class="container">
-  <section class="page-header">
-    <h1>Contact</h1>
-    <p>Have a project in mind? Let's talk.</p>
-  </section>
+      <section class="contact-section">
+        <form id="contactForm" novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your full name"
+              required
+              minlength="2" />
+            <small class="error" data-error-for="name"></small>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required />
+            <small class="error" data-error-for="email"></small>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" />
+            <small class="error" data-error-for="subject"></small>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell me about your project"
+              required
+              minlength="10"></textarea>
+            <small class="error" data-error-for="message"></small>
+          </div>
+          <div class="form-actions">
+            <button class="btn primary" type="submit" onclick="sendMail()">
+              Send Message
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
 
-  <section class="contact-section">
-    <form id="contactForm" novalidate>
-      <div class="form-field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your full name" required minlength="2" />
-        <small class="error" data-error-for="name"></small>
-      </div>
-      <div class="form-field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required />
-        <small class="error" data-error-for="email"></small>
-      </div>
-      <div class="form-field">
-        <label for="subject">Subject</label>
-        <input id="subject" name="subject" type="text" />
-        <small class="error" data-error-for="subject"></small>
-      </div>
-      <div class="form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required minlength="10"></textarea>
-        <small class="error" data-error-for="message"></small>
-      </div>
-      <div class="form-actions">
-        <button class="btn primary" type="submit" onclick="sendMail()">Send Message</button>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </div>
-    </form>
+        <aside class="contact-aside">
+          <h2 class="side-head">Other ways</h2>
+          <ul>
+            <li class="side">Accra, Ghana</li>
+            <li class="side">
+              <a href="mailto:majesticjnr1@gmail.com">majesticjnr1@gmail.com</a>
+            </li>
+            <li class="side">
+              <a href="tel:+233241877694">+233 241 877 694</a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </main>
 
-    <aside class="contact-aside">
-      <h2 class="side-head">Other ways</h2>
-      <ul>
-        <li class="side">Accra, Ghana</li>
-        <li class="side"><a href="mailto:majesticjnr1@gmail.com">majesticjnr1@gmail.com</a></li>
-        <li class="side"><a href="tel:+233241877694">+233 241 877 694</a></li>
-      </ul>
-    </aside>
-  </section>
-</main>
+    <div data-component="birthday-widget"></div>
 
-<div data-component="birthday-widget"></div>
+    <footer data-component="footer"></footer>
 
-<footer data-component="footer"></footer>
-
-<script src="assets/js/sendmail.js"></script>
-<script type="module" src="assets/js/birthday.js"></script>
-</body>
+    <script src="assets/js/sendmail.js"></script>
+    <script type="module" src="assets/js/birthday.js"></script>
+  </body>
 </html>
