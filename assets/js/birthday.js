@@ -28,14 +28,6 @@ async function initBirthdayWidget() {
       String(today.getMonth() + 1).padStart(2, "0") +
       "-" +
       String(today.getDate()).padStart(2, "0");
-    console.log(
-      "Current date:",
-      today.toDateString(),
-      "mmdd:",
-      mmdd,
-      "BIRTHDAY:",
-      BIRTHDAY,
-    );
     return mmdd === BIRTHDAY;
   }
 
@@ -62,14 +54,6 @@ async function initBirthdayWidget() {
       if (distance <= 0) {
         countdownEl.textContent = "🎉 It's my Birthday Today!";
         return;
-      }
-
-      // Check if today is birthday and show if not already shown
-      if (isTodayBirthday() && !birthdayShown) {
-        toggleBtn.classList.remove("hidden");
-        box.classList.remove("hidden");
-        loadMessages();
-        birthdayShown = true;
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -127,21 +111,15 @@ async function initBirthdayWidget() {
     });
   }
 
-  // Hide toggle button before birthday
-  toggleBtn.classList.add("hidden");
-
-  let birthdayShown = false;
-
-  // Start countdown always
-  startCountdown();
-
-  // If today is birthday → show box & messages
+  // Check if today is birthday at startup
   if (isTodayBirthday()) {
     toggleBtn.classList.remove("hidden");
     box.classList.remove("hidden");
     loadMessages();
-    birthdayShown = true;
   }
+
+  // Start countdown always
+  startCountdown();
 }
 
 // Wait for components to load, then initialize
