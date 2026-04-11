@@ -53,8 +53,15 @@ async function initBirthdayWidget() {
 
       if (distance <= 0) {
         countdownEl.textContent = "🎉 It's my Birthday Today!";
-        toggleBtn.classList.remove("hidden");
         return;
+      }
+
+      // Check if today is birthday and show if not already shown
+      if (isTodayBirthday() && !birthdayShown) {
+        toggleBtn.classList.remove("hidden");
+        box.classList.remove("hidden");
+        loadMessages();
+        birthdayShown = true;
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -115,6 +122,8 @@ async function initBirthdayWidget() {
   // Hide toggle button before birthday
   toggleBtn.classList.add("hidden");
 
+  let birthdayShown = false;
+
   // Start countdown always
   startCountdown();
 
@@ -123,6 +132,7 @@ async function initBirthdayWidget() {
     toggleBtn.classList.remove("hidden");
     box.classList.remove("hidden");
     loadMessages();
+    birthdayShown = true;
   }
 }
 
