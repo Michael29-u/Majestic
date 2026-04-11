@@ -28,6 +28,14 @@ async function initBirthdayWidget() {
       String(today.getMonth() + 1).padStart(2, "0") +
       "-" +
       String(today.getDate()).padStart(2, "0");
+    console.log(
+      "Current date:",
+      today.toDateString(),
+      "mmdd:",
+      mmdd,
+      "BIRTHDAY:",
+      BIRTHDAY,
+    );
     return mmdd === BIRTHDAY;
   }
 
